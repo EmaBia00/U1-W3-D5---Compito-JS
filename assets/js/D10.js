@@ -621,6 +621,15 @@ addTrClass();
   ***
 
 */
+const halfTree = (num) => {
+  const ast = "*";
+  let tree = ""; //Ho provato a farlo ma non capisco come mai mi stampa piu asterischi di quanti ne chiedo su più righe.
+  for (let i = 0; i <= num; i++) {
+    tree += "*";
+    console.log(tree);
+  }
+};
+halfTree(3);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -637,3 +646,18 @@ addTrClass();
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+console.log("ESERCIZIO 29");
+
+const isItPrime = (num) => {
+  for (let i = 2; i < num; i++) {
+    //La i parte da 2 perchè 1 è sempre divisibile per tutti i numeri e mi annullerebbe il controllo sottostante
+    if (num % i === 0) {
+      //controllo se il numero è divisibile per un qualsiasi numero, se non ne trovo nessuno vuol dire che num è un numero primo
+      console.log("Il numero non è primo");
+      return false;
+    }
+  }
+  console.log("Il numero è primo");
+  return true;
+};
+isItPrime(5);
